@@ -92,13 +92,13 @@ h2.serif { font-size: clamp(2.4rem, 5.4vw, 4rem); padding-bottom: .08em; }
 .btn-sm { height: 34px; padding: 0 .85rem; font-size: .85rem; border-radius: 10px; }
 
 /* ---------- Top bar & language ---------- */
-.masthead { display: flex; justify-content: space-between; align-items: flex-start; gap: 1.5rem; padding-block: 1.6rem 0; }
+.masthead { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1.5rem; padding-block: 1.6rem 0; }
 .lang { display: inline-flex; padding: 3px; border-radius: 10px; border: 1px solid var(--line-strong); background: rgba(232, 246, 244, .02); font: 500 .72rem/1 var(--mono); }
 .lang button { all: unset; cursor: pointer; padding: .42rem .55rem; border-radius: 7px; color: var(--dim); transition: color .2s, background .2s; }
 .lang button[aria-pressed="true"] { background: rgba(232, 246, 244, .1); color: var(--fg); }
 .lang button:focus-visible { outline: 2px solid var(--accent); }
-.who { display: inline-flex; align-items: flex-start; gap: 1.25rem; min-width: 0; }
-.masthead .who > div { min-width: 0; padding-top: .2rem; }
+.who { display: inline-flex; align-items: center; gap: 1.25rem; min-width: 0; }
+.masthead .who > div { min-width: 0; }
 .name { font-weight: 500; letter-spacing: -.01em; }
 
 /* ---------- Intro column (photo, name, statement, contact) ---------- */
@@ -107,7 +107,7 @@ section.block.intro { padding-top: 1.75rem; }
 .portrait img { width: 100%; height: 100%; object-fit: cover; }
 .name-title { font-size: clamp(1.8rem, 3.2vw, 2.5rem); }
 .role { margin: .2rem 0 0; }
-.bio { margin: 1rem 0 0; max-width: 52ch; font: 350 1.08rem/1.55 var(--display); letter-spacing: -.005em; color: var(--muted); text-wrap: pretty; }
+.bio { flex-basis: 100%; margin: .4rem 0 0; max-width: 60ch; font: 350 1.08rem/1.55 var(--display); letter-spacing: -.005em; color: var(--muted); text-wrap: pretty; }
 /* ---------- Articles ---------- */
 .rows { border-top: 1px solid var(--line); }
 .row { display: grid; grid-template-columns: 9.5rem minmax(0, 1fr) auto; gap: 1.5rem; align-items: center; padding-block: 1.4rem; border-bottom: 1px solid var(--line); }
@@ -132,6 +132,7 @@ section.block.intro { padding-top: 1.75rem; }
 .side-group { display: grid; gap: .8rem; }
 .side-list { list-style: none; margin: 0; padding: 0; display: grid; }
 .side-list li { display: grid; gap: .15rem; padding-block: .7rem; border-top: 1px solid var(--line); }
+.side-list .t, .side-list .d { display: block; }
 .side-list li:last-child { border-bottom: 1px solid var(--line); }
 .side-list .t { font-weight: 500; font-size: .95rem; }
 .side-list .d { color: var(--dim); font: 400 .74rem/1.4 var(--mono); }

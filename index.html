@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/style.css?v=4">
 </head>
 <body>
 
@@ -26,13 +26,13 @@
       <div>
         <h1 class="serif name-title">Felipe Rodrigues</h1>
         <p class="eyebrow role" data-i18n="role">Líder Técnico · Claro S.A. · Natal, BR</p>
-        <p class="bio" data-i18n="about.q">“Sistemas são construídos por pessoas. Meu trabalho é dar direção técnica clara e formar times que entregam com autonomia, em produtos usados por milhões.”</p>
       </div>
     </div>
     <div class="lang" role="group" aria-label="Idioma / Language">
       <button type="button" id="lang-pt" data-lang="pt" aria-pressed="true">PT</button>
       <button type="button" id="lang-en" data-lang="en" aria-pressed="false">EN</button>
     </div>
+    <p class="bio" data-i18n="about.q">“Sistemas são construídos por pessoas. Meu trabalho é dar direção técnica clara e formar times que entregam com autonomia, em produtos usados por milhões.”</p>
   </header>
 
   <!-- Career: intro on the left, timeline on the right -->
@@ -49,13 +49,6 @@
         <div class="side-group">
           <span class="eyebrow" data-i18n="side.stack">Stack principal</span>
           <ul class="tags"><li>Java</li><li>Quarkus</li><li>AWS</li><li>Lambda</li><li>ECS</li><li>EventBridge</li><li>SQS</li><li>DynamoDB</li><li>PostgreSQL</li><li>Flutter</li><li>Microservices</li><li>Event-driven</li><li>CI/CD</li><li>IaC</li><li data-i18n="tag.obs">Observabilidade</li></ul>
-        </div>
-        <div class="side-group">
-          <span class="eyebrow" data-i18n="side.lang">Idiomas</span>
-          <ul class="side-list">
-            <li><span class="t" data-i18n="lang.pt">Português</span><span class="d" data-i18n="lang.pt.d">nativo</span></li>
-            <li><span class="t" data-i18n="lang.en">Inglês</span><span class="d" data-i18n="lang.en.d">intermediário</span></li>
-          </ul>
         </div>
       </aside>
 
@@ -251,8 +244,7 @@
     "c6.t": "Product and innovation", "c6.d": "Close collaboration with Product, stakeholders and business leadership. Roots in mobile and design with Flutter.",
     "xp.now": "Now", "tag.lead": "leadership",
     "e1.t": "B.Sc. in Information Technology", "e2.t": "Technical degree in Computing",
-    "side.edu": "Education", "side.stack": "Core stack", "side.lang": "Languages", "tag.obs": "Observability",
-    "lang.pt": "Portuguese", "lang.pt.d": "native", "lang.en": "English", "lang.en.d": "intermediate",
+    "side.edu": "Education", "side.stack": "Core stack", "tag.obs": "Observability",
     "x1.role": "Tech Lead", "x1.d": "Technical leadership on payment platforms across the Claro group, aligning architecture decisions, engineering culture and business strategy.",
     "x2.role": "Software Architect & Tech Lead", "x2.d": "Architecture and technical leadership for a financial platform handling 11M+ Pix transactions a month across B2C and B2B payment ecosystems.",
     "x2.pts": "<li>Led the end-to-end delivery of <a class=\"ini\" href=\"iniciativas/pix-automatico.html\">Pix Automático</a>, from architecture design to production rollout.</li><li>Defined resilient cloud-native architectures for critical payment services in a regulated (BACEN) environment.</li><li>Designed a <a class=\"ini\" href=\"iniciativas/multi-tenant.html\">multi-tenant, self-service AWS provisioning platform</a> for B2B clients.</li><li>Worked with Claro S.A. business areas to integrate payments with core and billing systems.</li>",
