@@ -15,9 +15,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="assets/style.css?v=5">
+<link rel="stylesheet" href="assets/style.css?v=7">
 </head>
 <body>
+<div class="ambient" aria-hidden="true"><i class="ambient-glow"></i><i class="ambient-beam"></i></div>
 
 <main>
   <header class="wrap masthead">
@@ -344,6 +345,25 @@
     if (el || window.top !== window.self) (el || document.documentElement).scrollIntoView({ block: "start" });
   };
   window.addEventListener("load", jump);
+
+  // Ambient glow follows the pointer, softly
+  const glow = $(".ambient-glow");
+  let gq = false, gx = 0, gy = 0;
+  window.addEventListener("pointermove", (e) => {
+    gx = e.clientX; gy = e.clientY;
+    if (!gq) { gq = true; requestAnimationFrame(() => { gq = false; glow.style.setProperty("--gx", gx + "px"); glow.style.setProperty("--gy", gy + "px"); }); }
+  }, { passive: true });
+
+  // Content rises into view as it scrolls in (once), with a small stagger between siblings
+  const fx = document.querySelectorAll(".masthead .who, .masthead .lang, .bio, .side-group, .tl > li, .head, .cell, .quote, .row, .more, .talk-inner");
+  const motionOK = !matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (motionOK && "IntersectionObserver" in window) {
+    fx.forEach(el => { el.classList.add("fx"); const i = [...el.parentElement.children].indexOf(el); el.style.transitionDelay = Math.min(i, 8) * 60 + "ms"; });
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); } });
+    }, { threshold: .12, rootMargin: "0px 0px -6% 0px" });
+    fx.forEach(el => io.observe(el));
+  }
 
   setLang(initial);
 })();

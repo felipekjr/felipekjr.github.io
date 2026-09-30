@@ -19,5 +19,21 @@
   const top = () => { window.scrollTo(0, 0); if (window.top !== window.self) document.documentElement.scrollIntoView({ block: "start" }); };
   top();
   window.addEventListener("load", top);
+  const glow = document.querySelector(".ambient-glow");
+  let gq = false, gx = 0, gy = 0;
+  if (glow) window.addEventListener("pointermove", (e) => {
+    gx = e.clientX; gy = e.clientY;
+    if (!gq) { gq = true; requestAnimationFrame(() => { gq = false; glow.style.setProperty("--gx", gx + "px"); glow.style.setProperty("--gy", gy + "px"); }); }
+  }, { passive: true });
+  // Content rises into view as it scrolls in (once), with a small stagger between siblings
+  const fx = document.querySelectorAll(".top .who, .top-right, .detail-card, .story, .others");
+  const motionOK = !matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (motionOK && "IntersectionObserver" in window) {
+    fx.forEach(el => { el.classList.add("fx"); const i = [...el.parentElement.children].indexOf(el); el.style.transitionDelay = Math.min(i, 8) * 60 + "ms"; });
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); } });
+    }, { threshold: .12, rootMargin: "0px 0px -6% 0px" });
+    fx.forEach(el => io.observe(el));
+  }
   setLang(initial);
 })();
