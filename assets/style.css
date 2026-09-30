@@ -266,11 +266,11 @@ section.block { padding-block: clamp(5rem, 11vw, 8.5rem); }
 
 /* ---------- Recommendations ---------- */
 .quotes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
-.quote { position: relative; margin: 0; padding: clamp(2.6rem, 5vw, 3.2rem) clamp(1.5rem, 3.5vw, 2.4rem) clamp(1.5rem, 3.5vw, 2.2rem); border: 1px solid var(--line); border-radius: var(--radius); background: var(--panel); display: grid; gap: 1.6rem; align-content: space-between; overflow: hidden; }
-.quote::after { content: "\201C"; position: absolute; top: .45rem; left: 1.15rem; font: 400 4.6rem/1 var(--display); color: var(--accent); opacity: .5; pointer-events: none; }
-.quote blockquote { margin: 0; font: 350 clamp(1.1rem, 1.8vw, 1.32rem)/1.5 var(--display); letter-spacing: -.012em; color: var(--fg); font-variation-settings: "SOFT" 0, "WONK" 0; text-wrap: pretty; }
+.quote { position: relative; margin: 0; padding: 2rem 1.5rem 1.4rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--panel); display: grid; gap: 1.1rem; align-content: space-between; overflow: hidden; }
+.quote::after { content: "\201C"; position: absolute; top: .3rem; left: 1rem; font: 400 3rem/1 var(--display); color: var(--accent); opacity: .5; pointer-events: none; }
+.quote blockquote { margin: 0; font: 350 clamp(1rem, 1.3vw, 1.1rem)/1.5 var(--display); letter-spacing: -.01em; color: var(--fg); font-variation-settings: "SOFT" 0, "WONK" 0; text-wrap: pretty; }
 .quote figcaption { display: flex; align-items: center; gap: .8rem; font-size: .9rem; }
-.quote figcaption .av { width: 34px; height: 34px; border-radius: 999px; display: grid; place-items: center; font: 500 .75rem/1 var(--mono); color: var(--accent); background: var(--accent-soft); border: 1px solid rgba(79, 209, 193, .3); }
+.quote figcaption .av { width: 30px; height: 30px; border-radius: 999px; display: grid; place-items: center; font: 500 .75rem/1 var(--mono); color: var(--accent); background: var(--accent-soft); border: 1px solid rgba(79, 209, 193, .3); }
 .quote figcaption b { font-weight: 500; display: block; }
 .quote figcaption span { color: var(--dim); font: 400 .74rem/1.4 var(--mono); }
 .quote-note { margin: 1rem 0 0; color: var(--dim); font: 400 .74rem/1.4 var(--mono); text-align: center; }
