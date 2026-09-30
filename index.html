@@ -26,6 +26,7 @@
       <div>
         <h1 class="serif name-title">Felipe Rodrigues</h1>
         <p class="eyebrow role" data-i18n="role">Líder Técnico · Claro S.A. · Natal, BR</p>
+        <p class="bio" data-i18n="about.q">“Sistemas são construídos por pessoas. Meu trabalho é dar direção técnica clara e formar times que entregam com autonomia, em produtos usados por milhões.”</p>
       </div>
     </div>
     <div class="lang" role="group" aria-label="Idioma / Language">
@@ -38,18 +39,23 @@
   <section class="block intro" id="trajetoria">
     <div class="wrap xp-grid">
       <aside class="xp-side">
-        <blockquote class="serif statement" data-i18n="about.q">“Sistemas são construídos por pessoas. Meu trabalho é dar direção técnica clara e formar times que entregam com autonomia, em produtos usados por milhões.”</blockquote>
-        <div class="edu">
-          <div class="edu-item">
-            <span class="eyebrow">2018 – 2022</span>
-            <span class="t" data-i18n="e1.t">Bacharelado em Tecnologia da Informação</span>
-            <span class="d">UFRN</span>
-          </div>
-          <div class="edu-item">
-            <span class="eyebrow">2014 – 2017</span>
-            <span class="t" data-i18n="e2.t">Técnico em Informática</span>
-            <span class="d">IFRN</span>
-          </div>
+        <div class="side-group">
+          <span class="eyebrow" data-i18n="side.edu">Formação</span>
+          <ul class="side-list">
+            <li><span class="t" data-i18n="e1.t">Bacharelado em Tecnologia da Informação</span><span class="d">UFRN · 2018 – 2022</span></li>
+            <li><span class="t" data-i18n="e2.t">Técnico em Informática</span><span class="d">IFRN · 2014 – 2017</span></li>
+          </ul>
+        </div>
+        <div class="side-group">
+          <span class="eyebrow" data-i18n="side.stack">Stack principal</span>
+          <ul class="tags"><li>Java</li><li>Quarkus</li><li>AWS</li><li>Lambda</li><li>ECS</li><li>EventBridge</li><li>SQS</li><li>DynamoDB</li><li>PostgreSQL</li><li>Flutter</li><li>Microservices</li><li>Event-driven</li><li>CI/CD</li><li>IaC</li><li data-i18n="tag.obs">Observabilidade</li></ul>
+        </div>
+        <div class="side-group">
+          <span class="eyebrow" data-i18n="side.lang">Idiomas</span>
+          <ul class="side-list">
+            <li><span class="t" data-i18n="lang.pt">Português</span><span class="d" data-i18n="lang.pt.d">nativo</span></li>
+            <li><span class="t" data-i18n="lang.en">Inglês</span><span class="d" data-i18n="lang.en.d">intermediário</span></li>
+          </ul>
         </div>
       </aside>
 
@@ -183,6 +189,23 @@
     </div>
   </section>
 
+  <!-- Articles -->
+  <section class="block" id="artigos">
+    <div class="wrap reveal">
+      <div class="head">
+        <h2 class="serif" data-i18n="os.title">Artigos</h2>
+      </div>
+      <div class="rows">
+        <a class="row" href="https://medium.com/@felipekjr/variantes-de-build-com-flutter-android-e-ios-a5552bb429ae" target="_blank" rel="noopener">
+          <span class="kind">Medium · PT-BR</span>
+          <div><div class="t">Flutter Flavors (Android e iOS) do jeito simples</div><div class="d" data-i18n="os.a1">Variantes de build e múltiplos pontos de entrada no Flutter.</div></div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+        </a>
+      </div>
+      <a class="more" href="https://medium.com/@felipekjr" target="_blank" rel="noopener"><span data-i18n="os.more">Todos os artigos no Medium</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </section>
+
   <!-- Contact -->
   <section class="block talk" id="contato">
     <div class="wrap talk-inner">
@@ -228,6 +251,8 @@
     "c6.t": "Product and innovation", "c6.d": "Close collaboration with Product, stakeholders and business leadership. Roots in mobile and design with Flutter.",
     "xp.now": "Now", "tag.lead": "leadership",
     "e1.t": "B.Sc. in Information Technology", "e2.t": "Technical degree in Computing",
+    "side.edu": "Education", "side.stack": "Core stack", "side.lang": "Languages", "tag.obs": "Observability",
+    "lang.pt": "Portuguese", "lang.pt.d": "native", "lang.en": "English", "lang.en.d": "intermediate",
     "x1.role": "Tech Lead", "x1.d": "Technical leadership on payment platforms across the Claro group, aligning architecture decisions, engineering culture and business strategy.",
     "x2.role": "Software Architect & Tech Lead", "x2.d": "Architecture and technical leadership for a financial platform handling 11M+ Pix transactions a month across B2C and B2B payment ecosystems.",
     "x2.pts": "<li>Led the end-to-end delivery of <a class=\"ini\" href=\"iniciativas/pix-automatico.html\">Pix Automático</a>, from architecture design to production rollout.</li><li>Defined resilient cloud-native architectures for critical payment services in a regulated (BACEN) environment.</li><li>Designed a <a class=\"ini\" href=\"iniciativas/multi-tenant.html\">multi-tenant, self-service AWS provisioning platform</a> for B2B clients.</li><li>Worked with Claro S.A. business areas to integrate payments with core and billing systems.</li>",
@@ -241,6 +266,9 @@
     "q1": "As a leader, he stands out as an excellent listener, showing empathy for the team's difficulties and easing communication across areas. On top of that, he has a solid architectural vision and a constant drive for innovation in every delivery.",
     "q2": "Felipe is proactive in solving problems, likes to innovate and doesn't limit himself to what is asked. He always goes further, aiming to do his best. He is self-taught and responsible.",
     "rec.via": "via LinkedIn",
+    "os.title": "Articles",
+    "os.a1": "Build variants and multiple entry points in Flutter (in Portuguese).",
+    "os.more": "All articles on Medium",
     "cta.title": "Let's talk.",
     "cta.lede": "Open to conversations about product, engineering and technical leadership.",
     "cta.copy": "Copy email", "cta.copied": "Copied!"
