@@ -100,6 +100,8 @@ h2.serif { font-size: clamp(2.4rem, 5.4vw, 4rem); padding-bottom: .08em; }
 .who { display: inline-flex; align-items: center; gap: 1.25rem; min-width: 0; }
 .masthead .who > div { min-width: 0; }
 .name { font-weight: 500; letter-spacing: -.01em; }
+.avatar { width: 36px; height: 36px; border-radius: 10px; object-fit: cover; border: 1px solid var(--line-strong); }
+.detail .who { gap: .7rem; }
 
 /* ---------- Intro column (photo, name, statement, contact) ---------- */
 section.block.intro { padding-top: 1.75rem; }
