@@ -157,11 +157,13 @@ section.block.intro { padding-top: 3.5rem; }
 .talk h2.serif { font-size: clamp(2.6rem, 6vw, 4.4rem); }
 .talk .lede { text-align: center; }
 @media (max-width: 560px) { .masthead { flex-wrap: wrap; } .masthead .lang { order: -1; margin-left: auto; } .portrait { width: 64px; } }
-.edu-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.xp-grid { display: grid; grid-template-columns: minmax(0, .75fr) minmax(0, 1.65fr); gap: clamp(2rem, 5vw, 4.5rem); align-items: start; }
+.xp-side { position: sticky; top: 3rem; display: grid; gap: .9rem; }
+@media (max-width: 900px) { .xp-grid { grid-template-columns: minmax(0, 1fr); } .xp-side { position: static; } }
+.edu-grid { list-style: none; margin: 0; padding: 0; display: grid; gap: .75rem; }
 .edu-grid li { display: grid; gap: .25rem; padding: 1.2rem 1.3rem; border: 1px solid var(--line); border-radius: 14px; background: var(--panel); }
 .edu-grid .t { font-weight: 500; }
 .edu-grid .d { color: var(--dim); font: 400 .74rem/1.4 var(--mono); }
-@media (max-width: 640px) { .edu-grid { grid-template-columns: minmax(0, 1fr); } }
 
 /* ---------- Sections ---------- */
 section.block { padding-block: clamp(5rem, 11vw, 8.5rem); }
@@ -283,7 +285,7 @@ section.block { padding-block: clamp(5rem, 11vw, 8.5rem); }
 .tl::before, .tl::after { content: ""; position: absolute; left: 4px; top: 2.2rem; bottom: 2.2rem; width: 1px; }
 .tl::before { background: var(--line-strong); }
 .tl::after { background: linear-gradient(var(--accent), rgba(79, 209, 193, .35)); box-shadow: 0 0 10px var(--accent); transform-origin: top; transform: scaleY(var(--fill)); }
-.tl > li { position: relative; display: grid; grid-template-columns: 9rem minmax(0, 1fr); gap: .5rem 2rem; padding-block: 1.9rem; border-bottom: 1px solid var(--line); }
+.tl > li { position: relative; display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); gap: .5rem 1.75rem; padding-block: 1.75rem; border-bottom: 1px solid var(--line); }
 .tl > li:first-child { border-top: 1px solid var(--line); }
 .tl > li::before {
   content: ""; position: absolute; left: calc(-2.1rem); top: 2.2rem; width: 9px; height: 9px; border-radius: 999px;
@@ -292,7 +294,7 @@ section.block { padding-block: clamp(5rem, 11vw, 8.5rem); }
 .tl > li.on::before { background: var(--accent); border-color: var(--accent); box-shadow: 0 0 0 4px rgba(79, 209, 193, .16), 0 0 14px var(--accent); }
 .tl .when { font: 400 .8rem/1.9 var(--mono); color: var(--dim); font-variant-numeric: tabular-nums; }
 .tl .now { display: inline-flex; align-items: center; gap: .45rem; color: var(--accent); }
-.tl .main { display: grid; gap: .8rem; min-width: 0; max-width: 62ch; }
+.tl .main { display: grid; gap: .8rem; min-width: 0; }
 .tl .who { display: grid; gap: .1rem; }
 .tl .role { font-weight: 500; font-size: 1.06rem; letter-spacing: -.01em; }
 .tl .org { color: var(--muted); font-size: .95rem; }

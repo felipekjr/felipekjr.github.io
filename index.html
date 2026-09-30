@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="assets/style.css?v=8">
+<link rel="stylesheet" href="assets/style.css?v=9">
 </head>
 <body>
 <div class="ambient" aria-hidden="true"><i class="ambient-glow"></i><i class="ambient-beam"></i></div>
@@ -30,15 +30,23 @@
       </div>
     </div>
     <div class="lang" role="group" aria-label="Idioma / Language">
-      <button type="button" id="lang-pt" data-lang="pt" aria-pressed="true"><span class="flag" aria-hidden="true">🇧🇷</span>PT</button>
-      <button type="button" id="lang-en" data-lang="en" aria-pressed="false"><span class="flag" aria-hidden="true">🇺🇸</span>EN</button>
+      <button type="button" id="lang-pt" data-lang="pt" aria-pressed="true">PT<span class="flag" aria-hidden="true">🇧🇷</span></button>
+      <button type="button" id="lang-en" data-lang="en" aria-pressed="false">EN<span class="flag" aria-hidden="true">🇺🇸</span></button>
     </div>
     <p class="bio" data-i18n="about.q">“Sistemas são construídos por pessoas. Meu trabalho é dar direção técnica clara e formar times que entregam com autonomia, em produtos usados por milhões.”</p>
   </header>
 
   <!-- Career: intro on the left, timeline on the right -->
   <section class="block intro" id="trajetoria">
-    <div class="wrap">
+    <div class="wrap xp-grid">
+      <aside class="xp-side">
+        <span class="eyebrow" data-i18n="side.edu">Formação</span>
+        <ul class="edu-grid">
+          <li><span class="t" data-i18n="e1.t">Bacharelado em Tecnologia da Informação</span><span class="d">UFRN · 2018 – 2022</span></li>
+          <li><span class="t" data-i18n="e2.t">Técnico em Informática</span><span class="d">IFRN · 2014 – 2017</span></li>
+        </ul>
+      </aside>
+
       <ol class="tl" id="timeline">
         <li>
           <div class="when"><span class="now" data-i18n="xp.now">Atual</span></div>
@@ -103,19 +111,6 @@
           </div>
         </li>
       </ol>
-    </div>
-  </section>
-
-  <!-- Education -->
-  <section class="block" id="formacao" style="padding-top:0">
-    <div class="wrap">
-      <div class="head">
-        <h2 class="serif" data-i18n="side.edu">Formação</h2>
-      </div>
-      <ul class="edu-grid">
-        <li><span class="t" data-i18n="e1.t">Bacharelado em Tecnologia da Informação</span><span class="d">UFRN · 2018 – 2022</span></li>
-        <li><span class="t" data-i18n="e2.t">Técnico em Informática</span><span class="d">IFRN · 2014 – 2017</span></li>
-      </ul>
     </div>
   </section>
 
