@@ -162,15 +162,13 @@ section.block.intro { padding-top: 3.5rem; }
 @media (max-width: 900px) { .xp-grid { grid-template-columns: minmax(0, 1fr); } .xp-side { position: static; } }
 .edu-grid { list-style: none; margin: 0; padding: 0; display: grid; gap: .75rem; }
 .find-title { margin-top: 1.6rem; }
-.find { list-style: none; margin: 0; padding: 0; display: grid; gap: .5rem; }
-.find a { display: flex; align-items: center; gap: .9rem; padding: .7rem .8rem; border: 1px solid var(--line); border-radius: 14px; background: var(--panel); transition: border-color .25s, background .25s; }
-.find a:hover { border-color: rgba(79, 209, 193, .45); background: rgba(79, 209, 193, .04); }
-.find .ico { width: 36px; height: 36px; flex: none; display: grid; place-items: center; border-radius: 10px; border: 1px solid var(--line-strong); background: linear-gradient(180deg, rgba(232, 246, 244, .06), rgba(232, 246, 244, .01)); color: var(--fg); transition: color .25s, border-color .25s, box-shadow .25s; }
-.find a:hover .ico { color: var(--accent); border-color: rgba(79, 209, 193, .45); box-shadow: 0 0 20px -4px var(--accent-glow); }
+.find { list-style: none; margin: 0; padding: 0; display: flex; gap: .6rem; }
+.find .ico { all: unset; box-sizing: border-box; cursor: pointer; position: relative; width: 40px; height: 40px; display: grid; place-items: center; border-radius: 11px; border: 1px solid var(--line-strong); background: linear-gradient(180deg, rgba(232, 246, 244, .06), rgba(232, 246, 244, .01)); color: var(--fg); transition: color .25s, border-color .25s, box-shadow .25s; }
+.find .ico:hover, .find .ico.done { color: var(--accent); border-color: rgba(79, 209, 193, .45); box-shadow: 0 0 20px -4px var(--accent-glow); }
+.find .ico:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .find .ico svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
-.find .txt { display: grid; gap: .1rem; min-width: 0; }
-.find .t { font-weight: 500; font-size: .95rem; }
-.find .d { color: var(--dim); font: 400 .74rem/1.4 var(--mono); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.find .tip { position: absolute; left: 50%; top: calc(100% + 6px); translate: -50% 0; padding: .3rem .5rem; border-radius: 6px; background: var(--fg); color: var(--bg); font: 500 .7rem/1 var(--sans); white-space: nowrap; opacity: 0; pointer-events: none; transition: opacity .2s; }
+.find .ico.done .tip { opacity: 1; }
 .edu-grid li { display: grid; gap: .25rem; padding: 1.2rem 1.3rem; border: 1px solid var(--line); border-radius: 14px; background: var(--panel); }
 .edu-grid .t { font-weight: 500; }
 .edu-grid .d { color: var(--dim); font: 400 .74rem/1.4 var(--mono); }
