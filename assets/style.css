@@ -92,22 +92,23 @@ h2.serif { font-size: clamp(2.4rem, 5.4vw, 4rem); padding-bottom: .08em; }
 .btn-sm { height: 34px; padding: 0 .85rem; font-size: .85rem; border-radius: 10px; }
 
 /* ---------- Top bar & language ---------- */
-.topbar { display: flex; justify-content: flex-end; padding-block: 1.2rem 0; }
+.masthead { display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; padding-block: 1.6rem 0; }
 .lang { display: inline-flex; padding: 3px; border-radius: 10px; border: 1px solid var(--line-strong); background: rgba(232, 246, 244, .02); font: 500 .72rem/1 var(--mono); }
 .lang button { all: unset; cursor: pointer; padding: .42rem .55rem; border-radius: 7px; color: var(--dim); transition: color .2s, background .2s; }
 .lang button[aria-pressed="true"] { background: rgba(232, 246, 244, .1); color: var(--fg); }
 .lang button:focus-visible { outline: 2px solid var(--accent); }
-.who { display: inline-flex; align-items: center; gap: .7rem; }
+.who { display: inline-flex; align-items: center; gap: 1.1rem; min-width: 0; }
 .name { font-weight: 500; letter-spacing: -.01em; }
 
 /* ---------- Intro column (photo, name, statement, contact) ---------- */
-.intro { padding-top: clamp(2rem, 5vw, 3.5rem); }
-.portrait { position: relative; width: 128px; aspect-ratio: 1; border-radius: 22px; overflow: hidden; margin: 0 0 .5rem; border: 1px solid var(--line-strong); box-shadow: 0 24px 60px -24px rgba(0, 0, 0, .95); }
+.intro { padding-top: 2.5rem; }
+.portrait { position: relative; width: 84px; flex: none; aspect-ratio: 1; border-radius: 18px; overflow: hidden; margin: 0; border: 1px solid var(--line-strong); box-shadow: 0 24px 60px -24px rgba(0, 0, 0, .95); }
 .portrait img { width: 100%; height: 100%; object-fit: cover; }
-.name-title { font-size: clamp(2.2rem, 4vw, 3rem); }
-.role { margin: -.4rem 0 0; }
+.name-title { font-size: clamp(1.8rem, 3.2vw, 2.5rem); }
+.role { margin: .2rem 0 0; }
 .statement { font-size: clamp(1.15rem, 1.6vw, 1.35rem); line-height: 1.45; letter-spacing: -.01em; font-weight: 350; color: var(--muted); text-wrap: pretty; -webkit-text-fill-color: var(--muted); background: none; }
 .contact { display: grid; gap: .6rem; justify-items: start; }
+@media (max-width: 560px) { .masthead { flex-wrap: wrap; } .masthead .lang { order: -1; margin-left: auto; } .portrait { width: 64px; } }
 .xp-side .edu { margin-top: .6rem; }
 
 /* ---------- Sections ---------- */
