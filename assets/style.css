@@ -305,8 +305,6 @@ section.block { padding-block: clamp(5rem, 11vw, 8.5rem); }
 .ini:hover { color: var(--accent); text-decoration-color: var(--accent); }
 .tags { display: flex; flex-wrap: wrap; gap: .4rem; list-style: none; margin: 0; padding: 0; }
 .tags li { font: 400 .72rem/1 var(--mono); color: var(--muted); padding: .38rem .55rem; border-radius: 7px; border: 1px solid var(--line); background: rgba(232, 246, 244, .02); }
-@media (max-width: 900px) {
-    }
 @media (max-width: 560px) { .tl > li { grid-template-columns: minmax(0, 1fr); } }
 
 /* ---------- Recommendations ---------- */
