@@ -104,12 +104,12 @@ h2.serif { font-size: clamp(2.4rem, 5.4vw, 4rem); padding-bottom: .08em; }
 .detail .who { gap: .7rem; }
 
 /* ---------- Intro column (photo, name, statement, contact) ---------- */
-section.block.intro { padding-top: 1.75rem; }
+section.block.intro { padding-top: 3.5rem; }
 .portrait { position: relative; width: 84px; flex: none; aspect-ratio: 1; border-radius: 18px; overflow: hidden; margin: 0; border: 1px solid var(--line-strong); box-shadow: 0 24px 60px -24px rgba(0, 0, 0, .95); }
 .portrait img { width: 100%; height: 100%; object-fit: cover; }
 .name-title { font-size: clamp(1.8rem, 3.2vw, 2.5rem); }
 .role { margin: .2rem 0 0; }
-.bio { flex-basis: 100%; margin: .4rem 0 0; max-width: 60ch; font: 350 1.08rem/1.55 var(--display); letter-spacing: -.005em; color: var(--muted); text-wrap: pretty; }
+.bio { flex-basis: 100%; margin: 1.6rem 0 0; max-width: 60ch; font: 350 1.08rem/1.55 var(--display); letter-spacing: -.005em; color: var(--muted); text-wrap: pretty; }
 /* ---------- Articles ---------- */
 .rows { border-top: 1px solid var(--line); }
 .row { display: grid; grid-template-columns: 9.5rem minmax(0, 1fr) auto; gap: 1.5rem; align-items: center; padding-block: 1.4rem; border-bottom: 1px solid var(--line); }
