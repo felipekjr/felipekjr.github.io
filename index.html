@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="assets/style.css?v=7">
+<link rel="stylesheet" href="assets/style.css?v=8">
 </head>
 <body>
 <div class="ambient" aria-hidden="true"><i class="ambient-glow"></i><i class="ambient-beam"></i></div>
@@ -30,29 +30,15 @@
       </div>
     </div>
     <div class="lang" role="group" aria-label="Idioma / Language">
-      <button type="button" id="lang-pt" data-lang="pt" aria-pressed="true">PT</button>
-      <button type="button" id="lang-en" data-lang="en" aria-pressed="false">EN</button>
+      <button type="button" id="lang-pt" data-lang="pt" aria-pressed="true"><span class="flag" aria-hidden="true">🇧🇷</span>PT</button>
+      <button type="button" id="lang-en" data-lang="en" aria-pressed="false"><span class="flag" aria-hidden="true">🇺🇸</span>EN</button>
     </div>
     <p class="bio" data-i18n="about.q">“Sistemas são construídos por pessoas. Meu trabalho é dar direção técnica clara e formar times que entregam com autonomia, em produtos usados por milhões.”</p>
   </header>
 
   <!-- Career: intro on the left, timeline on the right -->
   <section class="block intro" id="trajetoria">
-    <div class="wrap xp-grid">
-      <aside class="xp-side">
-        <div class="side-group">
-          <span class="eyebrow" data-i18n="side.edu">Formação</span>
-          <ul class="side-list">
-            <li><span class="t" data-i18n="e1.t">Bacharelado em Tecnologia da Informação</span><span class="d">UFRN · 2018 – 2022</span></li>
-            <li><span class="t" data-i18n="e2.t">Técnico em Informática</span><span class="d">IFRN · 2014 – 2017</span></li>
-          </ul>
-        </div>
-        <div class="side-group">
-          <span class="eyebrow" data-i18n="side.stack">Stack principal</span>
-          <ul class="tags"><li>Java</li><li>Quarkus</li><li>AWS</li><li>Lambda</li><li>ECS</li><li>EventBridge</li><li>SQS</li><li>DynamoDB</li><li>PostgreSQL</li><li>Flutter</li><li>Microservices</li><li>Event-driven</li><li>CI/CD</li><li>IaC</li><li data-i18n="tag.obs">Observabilidade</li></ul>
-        </div>
-      </aside>
-
+    <div class="wrap">
       <ol class="tl" id="timeline">
         <li>
           <div class="when"><span class="now" data-i18n="xp.now">Atual</span></div>
@@ -117,6 +103,19 @@
           </div>
         </li>
       </ol>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section class="block" id="formacao" style="padding-top:0">
+    <div class="wrap">
+      <div class="head">
+        <h2 class="serif" data-i18n="side.edu">Formação</h2>
+      </div>
+      <ul class="edu-grid">
+        <li><span class="t" data-i18n="e1.t">Bacharelado em Tecnologia da Informação</span><span class="d">UFRN · 2018 – 2022</span></li>
+        <li><span class="t" data-i18n="e2.t">Técnico em Informática</span><span class="d">IFRN · 2014 – 2017</span></li>
+      </ul>
     </div>
   </section>
 
@@ -245,7 +244,7 @@
     "c6.t": "Product and innovation", "c6.d": "Close collaboration with Product, stakeholders and business leadership. Roots in mobile and design with Flutter.",
     "xp.now": "Now", "tag.lead": "leadership",
     "e1.t": "B.Sc. in Information Technology", "e2.t": "Technical degree in Computing",
-    "side.edu": "Education", "side.stack": "Core stack", "tag.obs": "Observability",
+    "side.edu": "Education",
     "x1.role": "Tech Lead", "x1.d": "Technical leadership on payment platforms across the Claro group, aligning architecture decisions, engineering culture and business strategy.",
     "x2.role": "Software Architect & Tech Lead", "x2.d": "Architecture and technical leadership for a financial platform handling 11M+ Pix transactions a month across B2C and B2B payment ecosystems.",
     "x2.pts": "<li>Led the end-to-end delivery of <a class=\"ini\" href=\"iniciativas/pix-automatico.html\">Pix Automático</a>, from architecture design to production rollout.</li><li>Defined resilient cloud-native architectures for critical payment services in a regulated (BACEN) environment.</li><li>Designed a <a class=\"ini\" href=\"iniciativas/multi-tenant.html\">multi-tenant, self-service AWS provisioning platform</a> for B2B clients.</li><li>Worked with Claro S.A. business areas to integrate payments with core and billing systems.</li>",
@@ -355,7 +354,7 @@
   }, { passive: true });
 
   // Content rises into view as it scrolls in (once), with a small stagger between siblings
-  const fx = document.querySelectorAll(".masthead .who, .masthead .lang, .bio, .side-group, .tl > li, .head, .cell, .quote, .row, .more, .talk-inner");
+  const fx = document.querySelectorAll(".masthead .who, .masthead .lang, .bio, .tl > li, .head, .edu-grid > li, .cell, .quote, .row, .more, .talk-inner");
   const motionOK = !matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (motionOK && "IntersectionObserver" in window) {
     fx.forEach(el => { el.classList.add("fx"); const i = [...el.parentElement.children].indexOf(el); el.style.transitionDelay = Math.min(i, 8) * 60 + "ms"; });
